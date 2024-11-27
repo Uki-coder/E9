@@ -32,7 +32,7 @@ def calc_lin_u2u1(input_adresses, output_adresses, p0 = [1,0]):
     delta = [res[2] * 3, res[3] * 3]
     np.savetxt(output_adresses[1], delta)
 
-    eps = [np.abs(res[2]/res[0])*100, np.abs(res[3]/res[1])*100]
+    eps = [np.abs(res[2]* 3/res[0])*100, np.abs(res[3] * 3/res[1])*100]
     np.savetxt(output_adresses[2], eps)
 
     fig, ax = plt.subplots()
@@ -64,7 +64,7 @@ def calc_lin_u2n2(input_adresses, output_adresses):
     delta = [res[2] * 3, res[3] * 3]
     np.savetxt(output_adresses[1], delta)
 
-    eps = [np.abs(res[2] / res[0]) * 100, np.abs(res[3] / res[1]) * 100]
+    eps = [np.abs(res[2] * 3 / res[0]) * 100, np.abs(res[3] * 3 / res[1]) * 100]
     np.savetxt(output_adresses[2], eps)
 
     fig, ax = plt.subplots()
@@ -99,7 +99,7 @@ def calc_hyp_u2n1(input_adresses, output_adresses):
     delta = [res[2] * 3, res[3] * 3]
     np.savetxt(output_adresses[1], delta)
 
-    eps = [np.abs(res[2] / res[0]) * 100, np.abs(res[3] / res[1]) * 100]
+    eps = [np.abs(res[2] * 3 / res[0]) * 100, np.abs(res[3] * 3 / res[1]) * 100]
     np.savetxt(output_adresses[2], eps)
 
     fig, ax = plt.subplots()
